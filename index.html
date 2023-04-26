@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mort's Blog</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                </ul>
+            </nav>
+            <h1><a href="index.html">Mort's Blog</a></h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2>Latest Posts</h2>
+                    <h3>My Blog</h3>
+                    <p>Possimus repellat nemo explicabo aspernatur. Exercitationem id beatae qui aut id dolorum rem quia. Et ad sed ut in. Illum corporis expedita doloremque id ex at. Molestias molestiae esse rem necessitatibus molestiae consequatur. Eos laboriosam sed accusamus.</p>
+
+                    <h3>My Afternoon</h3>
+                    <p>Ex non et laudantium earum. Aliquid dignissimos quisquam et accusamus. Velit magnam ratione possimus. Quam nostrum tenetur expedita consequatur quo nulla. Repudiandae fuga suscipit nostrum aut vitae consequatur ipsum.</p>
+                </article>
+            </section>
+            <aside>
+                <div class="short-desc">
+                    <img src="https://cdn.quotesgram.com/img/76/73/930385935-Mort7.jpg" alt="Mort from Madagascar pleading">
+                    <h3><a href="index.html">Welcome!</a></h3>
+                    <p>Mortdecai (commonly known as Mort) is an incredibly cute and somewhat innocent and annoying mouse lemur, although his age is not confirmed.</p>
+                    <a id="target" href="#">Read more.</a>
+                    <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis finibus leo, a hendrerit felis elementum sit amet. Vestibulum facilisis, mauris vel elementum accumsan, nisi eros vestibulum est, id consequat magna sapien ut dui. Sed rutrum dignissim nibh quis sagittis. Integer quis ornare elit, nec tempus ipsum. Quisque sed purus eu nunc dictum ullamcorper. Integer elementum dui nec orci gravida, sit amet semper nulla egestas. Quisque in lacus nec lorem interdum fermentum. Vestibulum at pulvinar erat. <a id="show" href="#">Show less</a></p>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; M.Miller</p>
+            <p><a href="imprint.html">Imprint</a></p>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                // console.log('Hello, world!');
+                const target = document.getElementById("target");
+                const show = document.getElementById("show");
+                const ext = document.querySelector(".hidden");
+
+                target.addEventListener("click", function(event) {
+                    ext.classList.remove("hidden");
+                    target.classList.add("hidden");
+                    event.preventDefault();
+                });
+
+                show.addEventListener("click", function(event) {
+                    ext.classList.add("hidden");
+                    target.classList.remove("hidden");
+                    event.preventDefault();
+                });
+            });
+        </script>
+    </body>
+</html>
